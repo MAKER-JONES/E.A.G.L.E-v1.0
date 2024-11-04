@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/css/add-flight.css">
+</head>
+<body>
+    <div id="navBar">
+        <div style="display: flex; flex-direction: row; width: 100%; align-items: center; gap: 5px;">
+            <div style="width: 5px;"></div>
+            <a href="/dashboard"  style="text-decoration: none; font-size: large; font:bolder; padding: 2px; background-color: rgba(0,92,163,255); 
+            color: white; border-radius: 5px; text-align: center; padding-left: 4px; padding-right: 4px;">Dashboard</a>
+            <a href="/logout" style="text-decoration: none; font-size: large; font:bolder; padding: 2px; background-color: rgba(0,92,163,255); 
+            color: white; border-radius: 5px; text-align: center; padding-left: 4px; padding-right: 4px;">Logout</a>
+        </div>
+    </div>
+    <div id="mainBody">
+        <div id="center">
+           <div id="flight-form">
+                <input type="text" id="flight-input-name" placeholder="Flight Name" onkeypress="return avoidSpace(event)" >
+                <div id="flight-input-cadets">
+                    
+                    <div class="cadet-name" id="cadet-1">
+                        <button class="subtract-button" onclick="sub(this)" id="1">
+                            -
+                        </button>
+                       
+                        <input type="text" class="name-input" placeholder="First Name" id="1-first" onkeypress="return avoidSpace(event)">
+                        <input type="text" class="name-input" placeholder="Last Name" id="1-last" onkeypress="return avoidSpace(event)">
+                    </div>
+                    
+                </div>
+                <div id="edit-buttons-box">
+                    <button class="edit-buttons" onclick="addCadet()">
+                        Add Cadet
+                    </button>
+                    <button class="edit-buttons" onclick="submitFlight()">
+                        Submit
+                    </button>
+                </div>
+           </div>
+        </div>
+    </div>
+    <form action="/add-flight" hidden id="infoForm" method="post">
+        <input type="text" name="lastNames" id="form-lastNames">
+        <input type="text" name="firstNames" id="form-firstNames">
+        <input type="text" name="flightName" id="form-flightName">
+    </form>
+    <div id="logoBox">
+        <img src="/static/img/blueLogo.png" alt="" id="back-image">
+    </div>
+</body>
+<script src="/static/js/add-flight.js"></script>
+</html>

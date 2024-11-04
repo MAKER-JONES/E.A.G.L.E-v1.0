@@ -1,0 +1,164 @@
+body{
+    height: 100%;
+    width: 100vw;
+    
+    background-color:black;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    gap: 1px;
+    
+    
+}
+#back-image{
+    position: fixed;
+    width: 50%;
+    
+}
+#logoBox{
+    justify-self: center;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+   
+    justify-content: center;
+    position: fixed;
+}
+#navBar{
+    height: 10%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    color: white;
+}
+#mainBody{
+    margin-top: 15rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 1;
+    
+}
+#center{
+    width: fit-content;
+    height: 100%;
+    align-self: center;
+    display: flex;
+    flex-direction: row;
+    gap: 10rem;
+    
+}
+#navBar{
+    background-color: white;
+    width: 100%;
+    height: 2rem;
+    border-bottom-style: solid;
+    border-bottom-color: rgba(0,92,163,255);
+    gap: 1rem;
+}
+#flight-list-add{
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    height: 20rem;
+    gap: 5px;
+    
+   
+    
+}
+#flight-info-list{
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    overflow-y:scroll ;
+    background-color: white;
+    width: 80%;
+    align-self: center;
+    padding: 15px;
+    border-radius: 4px;
+}
+#flight-list{
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    overflow-y:scroll ;
+    background-color: white;
+    width: 80%;
+    align-self: center;
+    padding: 15px;
+    border-radius: 4px;
+}
+#flight-info{
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    height: 25rem;
+    gap: 5px;
+    align-items: center;
+}
+#flight-add{
+    background-color: white;
+    height: 2rem;
+    width: 18vw;
+   
+    text-align: center;
+    color: rgba(0,92,163,255);
+    font-size: 1.5rem;
+    border-radius: 8px;
+
+}
+#flight-add:hover{
+    
+    
+    background-color: grey;
+    height: 2rem;
+    width: 18vw;
+    border-radius: 5px;
+    text-align: center;
+    color: white/*rgba(0,92,163,255)*/;
+    font-size: 1.5rem;
+    
+}
+#flight-info-title{
+    /*background-color: white;*/
+    height: 2rem;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 1.5rem;
+}
+.flight-list-node{
+    background-color: rgba(0,92,163,255);
+    height: 2rem;
+    width: 80%;
+    align-self: center;
+    border-radius: 5px;
+    text-align: center;
+    color: white;
+}
+.flight-button{
+    height: 5vh;
+    background-color: white;
+    text-align: center;
+    color: rgba(0,92,163,255);
+    font-size: 1.5rem;
+    border-radius: 8px;
+}
+#cadetFrame{
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    overflow-y:scroll ;
+    background-color: white;
+    width: 80%;
+    align-self: center;
+    padding: 15px;
+    border-radius: 4px;
+}

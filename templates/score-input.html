@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/css/score-input.css">
+</head>
+<body>
+    <div id="navBar">
+        <div style="display: flex; flex-direction: row; width: 100%; align-items: center; gap: 5px;">
+            <div style="width: 5px;"></div>
+            <a href="/score-input"  style="text-decoration: none; font-size: large; font:bolder; padding: 2px; background-color: rgba(0,92,163,255); 
+            color: white; border-radius: 5px; text-align: center; padding-left: 4px; padding-right: 4px;">Back</a>
+            <a href="/dashboard"  style="text-decoration: none; font-size: large; font:bolder; padding: 2px; background-color: rgba(0,92,163,255); 
+            color: white; border-radius: 5px; text-align: center; padding-left: 4px; padding-right: 4px;">Dashboard</a>
+            <a href="/logout" style="text-decoration: none; font-size: large; font:bolder; padding: 2px; background-color: rgba(0,92,163,255); 
+            color: white; border-radius: 5px; text-align: center; padding-left: 4px; padding-right: 4px;">Logout</a>
+        </div>
+    </div>
+    
+    <table style="color: white; align-self: center; z-index: 1;">
+        <tr>
+            <td class="column-label">Cadet</td>
+            <td class="column-label">Uniform</td>
+            <td class="column-label">PT</td>
+            <td class="column-label">MBC</td>
+            <td class="column-label">Date</td>
+        </tr>
+        {% for i in range(length)%}
+        
+            <tr id="row-{{i}}">
+                <td id="0,{{i}}" class="cadet-name">
+                    {{cadets_last[i]}}, {{cadets_first[i]}}
+                </td>
+                <td  class="row-input"><input id="1,{{i}}" type="number"></td>
+                <td  class="row-input"><input id="2,{{i}}" type="number"></td>  
+                <td  class="row-input"><input id="3,{{i}}" type="number"></td>  
+                <td  class="row-input"><input id="4,{{i}}" type="date"></td>     
+            </tr>
+        {% endfor %}
+
+    </table>
+    <button id="sub-button" onclick="sub(`{{length}}`, `{{flight.cadets_id}}`)">
+        Submit
+    </button>
+    <form action="/score-input/{{flight.flight_name}}" id="input-form" method="post">
+        <input type="text" id="submit-input" name="data" hidden>
+    </form>
+    
+    <div id="logoBox">
+        <img src="/static/img/blueLogo.png" alt="" id="back-image">
+    </div>
+</body>
+<script src="/static/js/score-input.js"></script>
+</html>

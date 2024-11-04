@@ -1,0 +1,20 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {{error}}
+    <br>
+    Please wait to be redirected
+</body>
+<script>
+setTimeout(function() {
+    //your code to be executed after 1 second
+    //window.location.replace(`{{dir}}`)
+    history.go(-1)
+  }, 5000);
+</script>
+
+</html>

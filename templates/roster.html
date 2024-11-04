@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/css/roster.css">
+</head> 
+<body>
+     <div id="navBar">
+        <div style="display: flex; flex-direction: row; width: 100%; align-items: center; gap: 5px;">
+            <div style="width: 5px;"></div>
+            <a href="/dashboard"  style="text-decoration: none; font-size: large; font:bolder; padding: 2px; background-color: rgba(0,92,163,255); 
+            color: white; border-radius: 5px; text-align: center; padding-left: 4px; padding-right: 4px;">Dashboard</a>
+            <a href="/logout" style="text-decoration: none; font-size: large; font:bolder; padding: 2px; background-color: rgba(0,92,163,255); 
+            color: white; border-radius: 5px; text-align: center; padding-left: 4px; padding-right: 4px;">Logout</a>
+        </div>
+    </div>
+    <div id="mainBody">
+        <div id="center">
+            <div id="flight-list-add">
+                <a id="flight-add" style="text-decoration: none;" href="/add-flight">Add Flight</a>
+                <div id="flight-list">
+                    {% for roster in rosters %}
+                        <div class="flight-list-node" onclick="flightDisplay(`{{roster.flight_name}}`)">
+                            {{roster.flight_name}}
+                        </div>
+                    {% endfor %}
+                    
+                </div>
+            </div>
+            <div id="flight-info">
+                <div id="flight-info-title">Flight Cadets</div>
+                
+                <iframe src="" frameborder="0" id="cadetFrame"></iframe>
+                
+                <a id="flight-info-edit" style="text-decoration: none; cursor: pointer;" class="flight-button" href="/rosters">
+                    Edit Flight
+                </a>
+                <div id="flight-info-more"class="flight-button">
+                    More information
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="logoBox">
+        <img src="/static/img/blueLogo.png" alt="" id="back-image">
+    </div>
+</body>
+<script src="/static/js/rosters.js"></script>
+</html>

@@ -1,0 +1,113 @@
+body{
+    height: 100%;
+    width: 100vw;
+    
+    background-color:black;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    gap: 1px;
+    
+    
+}
+#back-image{
+    position: fixed;
+    width: 50%;
+    
+}
+#logoBox{
+    justify-self: center;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+   
+    justify-content: center;
+    position: fixed;
+}
+#navBar{
+    height: 10%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    color: white;
+    gap: 1rem;
+}
+#mainBody{
+    margin-top: 20rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 1;
+    
+}
+#center{
+    width: fit-content;
+    height: 100%;
+    align-self: center;
+    display: flex;
+    flex-direction: row;
+    gap: 10rem;
+    
+}
+
+#navBar{
+    background-color: white;
+    width: 100%;
+    height: 2rem;
+    border-bottom-style: solid;
+    border-bottom-color: rgba(0,92,163,255);
+}
+#flight-form{
+    display: flex;
+    flex-direction: column;
+    width: 30vw;
+}
+#flight-input-name{
+    width: 20rem;
+    align-self: center;
+    height: 2rem;
+    font-size: larger;
+    border-radius: 5px;
+    
+}
+#flight-input-name:focus{
+    outline: none;
+}
+#flight-input-cadets{
+    display: flex;
+    flex-direction: column;
+    width: 24rem;
+    height: 18rem;
+    align-self: center;
+    overflow-y: scroll;
+
+
+}
+.cadet-name{
+    align-self: center;
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+}
+#edit-buttons-box{
+    align-self: center;
+    display: flex;
+    flex-direction: row;
+}
+.name-input{
+    width: 45%;
+    height: 1.5rem;
+}
+.edit-buttons{
+    height: 2rem;
+    width: 10rem;
+}
+.subtract-button{
+    height: 1.8rem;
+    width: 1.8rem;
+    font-size: x-large;
+    font-weight: bold;
+    color:rgba(0,92,163,255) ;
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        display: flex;
+        flex-direction: column;
+    }
+    .outer-scoreCard{
+        align-self: center;
+        display:flex;
+        flex-direction: row;
+        gap: 4rem;
+    }
+    .flight_name{
+        background-color: white;
+        font-size: xx-large;
+        border-top-left-radius: 7px;
+        border-bottom-left-radius: 7px;
+        padding: 5px;
+        width: 22rem;
+    }    
+    .score{
+        background-color: white;
+        font-size: xx-large;
+        border-top-right-radius: 7px;
+        border-bottom-right-radius: 7px;
+        padding: 5px;
+        width: 6rem;
+        text-align: center;
+    }
+</style>
+<body>
+    {% if flight_group %}
+        {% for i in range(lengthF) %} 
+            <div class="outer-scoreCard">
+                <div class="flight_name">{{flight_data[i][1]}}</div>
+                <div class="score">{{flight_data[i][0]}}%</div>
+            </div>
+            <br>
+        {% endfor %}
+    {% else %}
+        
+        {% for i in range(lengthC) %}
+            <div class="outer-scoreCard">
+                <div class="flight_name">{{cadet_data[i][1]}}</div>
+                <div class="score">{{cadet_data[i][0]}}%</div>
+            </div>
+            <br>
+        {% endfor %}
+    {% endif %}
+</body>
+</html>

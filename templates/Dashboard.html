@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/css/Dashboard.css">
+</head>
+<body>
+    <div id="navBar">
+        <div style="display: flex; flex-direction: row; width: 100%; align-items: center; gap: 5px;">
+            <div style="width: 5px;"></div>
+            <a href="/dashboard"  style="text-decoration: none; font-size: large; font:bolder; padding: 2px; background-color: rgba(0,92,163,255); 
+            color: white; border-radius: 5px; text-align: center; padding-left: 4px; padding-right: 4px;">Dashboard</a>
+            <a href="/logout" style="text-decoration: none; font-size: large; font:bolder; padding: 2px; background-color: rgba(0,92,163,255); 
+            color: white; border-radius: 5px; text-align: center; padding-left: 4px; padding-right: 4px;">Logout</a>
+        </div>
+        
+    </div>
+    <div id="mainBody">
+        <div id="center">
+            <a class="dash-button" href="/rosters">
+                Rosters
+            </a>
+            <!--
+            <a class="dash-button">
+                Cadet Search
+            </a>
+            -->
+            <a class="dash-button" href="/score-input"> 
+                Input Scores
+            </a>
+            <a class="dash-button" href="/scoreboard">
+                Score Board
+            </a>
+        </div>
+    </div>
+    <div id="logoBox">
+        <img src="/static/img/blueLogo.png" alt="" id="back-image">
+    </div>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/Scoreboard.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="navBar">
+        <div style="display: flex; flex-direction: row; width: 100%; align-items: center; gap: 5px;">
+            <div style="width: 5px;"></div>
+            <a href="/dashboard"  style="text-decoration: none; font-size: large; font:bolder; padding: 2px; background-color: rgba(0,92,163,255); 
+            color: white; border-radius: 5px; text-align: center; padding-left: 4px; padding-right: 4px;">Dashboard</a>
+            <a href="/logout" style="text-decoration: none; font-size: large; font:bolder; padding: 2px; background-color: rgba(0,92,163,255); 
+            color: white; border-radius: 5px; text-align: center; padding-left: 4px; padding-right: 4px;">Logout</a>
+        </div>
+    </div>
+
+    <Table id="control-panel">
+        <tr> 
+            <td>
+                <select name="" id="group_type" class="control-toggle" onchange="search()">
+                    <option value="Flight">Flight</option>
+                    <option value="Cadet">Cadet</option>
+                    
+                </select>
+            </td>
+            <td>
+                <select name="score_type" id="score_type" class="control-toggle" onchange="search()">
+                    <option value="all">All</option>
+                    <option value="U">Uniform</option>
+                    <option value="P">PT</option>
+                    <option value="M">MBC</option>
+                    
+                    
+                </select>
+            </td>
+            
+        </tr>
+        <tr>
+            <td>
+                
+                <input id="start_date" type="date" class="control-toggle" onchange="search()">
+                
+            </td>
+            <td>
+                
+                <input id="end_date" type="date" class="control-toggle" onchange="search()">
+                
+            </td>
+        </tr>
+    </Table>
+    <div id="board-container">
+        <iframe src="/scoring-system/Flight+all+all+all" frameborder="0" id="board"></iframe>
+    </div>
+    
+
+
+
+    <div id="logoBox">
+        <img src="/static/img/blueLogo.png" alt="" id="back-image">
+    </div>
+</body>
+    <script src="/static/js/Scoreboard.js"></script>
+</html>
